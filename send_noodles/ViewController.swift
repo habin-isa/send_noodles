@@ -7,10 +7,19 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
     
     let defaults = UserDefaults.standard
+    
+    let locationManager = CLLocationManager()
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        let location = "\(locValue.latitude), \(locValue.longitude)"
+        
+    }
 
     @IBOutlet weak var inputNameField: UITextField!
     @IBOutlet weak var inputNumberField: UITextField!
@@ -31,6 +40,11 @@ class ViewController: UIViewController {
         sendLocationButton.isHidden = true
         locationFiller.isHidden = true
         // Do any additional setup after loading the view, typically from a nib.
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,7 +75,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sendLocationButtonTwo(_ sender: Any) {
-        
+        locationFiller.isHidden = false
+        locationFiller.text = "location = http://maps.apple.com/?ll=\(location)"
     }
     
 }
