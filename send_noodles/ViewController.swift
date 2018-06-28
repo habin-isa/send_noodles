@@ -19,7 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var subHeader: UILabel!
     @IBOutlet weak var numberFiller: UITextField!
     @IBOutlet weak var submitButtonTwo: UIButton!
-    
+    @IBOutlet weak var locationFiller: UITextField!
+    @IBOutlet weak var sendLocationButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,8 @@ class ViewController: UIViewController {
         nameFiller.isHidden = true
         subHeader.isHidden = true
         numberFiller.isHidden = true
+        sendLocationButton.isHidden = true
+        locationFiller.isHidden = true
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -54,8 +57,12 @@ class ViewController: UIViewController {
         nameFiller.isHidden = false
         subHeader.isHidden = false
         numberFiller.isHidden = false
+        sendLocationButton.isHidden = false
     }
     
+    @IBAction func sendLocationButtonTwo(_ sender: Any) {
+        
+    }
     
 }
 

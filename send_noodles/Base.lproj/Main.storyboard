@@ -69,6 +69,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZN-Xe-ASk">
+                                <rect key="frame" x="58" y="401" width="265" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.79887193111548671" green="1" blue="0.091940328882838429" alpha="0.68114546654929586" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Send noodle location"/>
+                                <connections>
+                                    <action selector="sendLocationButtonTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Il9-Wq-bcy"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="#location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CA0-PY-nks">
+                                <rect key="frame" x="80" y="332" width="220" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -77,8 +93,10 @@
                         <outlet property="hiLabel" destination="Bff-nD-GVj" id="mx2-NH-YbC"/>
                         <outlet property="inputNameField" destination="dz7-w0-hPv" id="MT0-pL-oUV"/>
                         <outlet property="inputNumberField" destination="jBb-mp-HUD" id="bdx-JL-CyA"/>
+                        <outlet property="locationFiller" destination="CA0-PY-nks" id="EMT-03-HTj"/>
                         <outlet property="nameFiller" destination="97y-6Q-3YG" id="nsX-a9-bDZ"/>
                         <outlet property="numberFiller" destination="Uta-dN-O38" id="rjo-Ao-RJc"/>
+                        <outlet property="sendLocationButton" destination="YZN-Xe-ASk" id="Wsa-0N-ffX"/>
                         <outlet property="subHeader" destination="HQm-X8-pQi" id="EYy-ib-eDv"/>
                         <outlet property="submitButtonTwo" destination="B8d-ZL-RdG" id="llH-iQ-pFW"/>
                     </connections>
