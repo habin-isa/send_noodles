@@ -12,12 +12,12 @@ import CoreLocation
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     let defaults = UserDefaults.standard
-    
+    var location:String = ""
     let locationManager = CLLocationManager()
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        let location = "\(locValue.latitude), \(locValue.longitude)"
+        location = "\(locValue.latitude), \(locValue.longitude)"
         
     }
 
