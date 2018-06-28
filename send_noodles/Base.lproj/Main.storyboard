@@ -79,17 +79,41 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="#location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CA0-PY-nks">
-                                <rect key="frame" x="80" y="332" width="220" height="30"/>
+                                <rect key="frame" x="44" y="333" width="292" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your current location is:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="136-J8-U4Y">
+                                <rect key="frame" x="90" y="292" width="195" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome, please fill in your details 🤓" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mw-hw-QNc">
+                                <rect key="frame" x="51" y="116" width="272" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.25490196078431371" green="0.60784313725490191" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40Q-kx-BwW">
+                                <rect key="frame" x="88" y="565" width="204" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86779479176191687" green="1" blue="0.42877861323754296" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Start the fun all over again"/>
+                                <connections>
+                                    <action selector="startAgainButtonTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ox-YT-eNd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="currentLocationDiv" destination="136-J8-U4Y" id="omJ-cH-hDK"/>
                         <outlet property="hiLabel" destination="Bff-nD-GVj" id="mx2-NH-YbC"/>
                         <outlet property="inputNameField" destination="dz7-w0-hPv" id="MT0-pL-oUV"/>
                         <outlet property="inputNumberField" destination="jBb-mp-HUD" id="bdx-JL-CyA"/>
@@ -97,8 +121,10 @@
                         <outlet property="nameFiller" destination="97y-6Q-3YG" id="nsX-a9-bDZ"/>
                         <outlet property="numberFiller" destination="Uta-dN-O38" id="rjo-Ao-RJc"/>
                         <outlet property="sendLocationButton" destination="YZN-Xe-ASk" id="Wsa-0N-ffX"/>
+                        <outlet property="startAgainButton" destination="40Q-kx-BwW" id="etq-5j-Bbu"/>
                         <outlet property="subHeader" destination="HQm-X8-pQi" id="EYy-ib-eDv"/>
                         <outlet property="submitButtonTwo" destination="B8d-ZL-RdG" id="llH-iQ-pFW"/>
+                        <outlet property="welcomeDiv" destination="9mw-hw-QNc" id="3tr-bb-mNx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

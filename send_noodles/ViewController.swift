@@ -30,6 +30,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var submitButtonTwo: UIButton!
     @IBOutlet weak var locationFiller: UITextField!
     @IBOutlet weak var sendLocationButton: UIButton!
+    @IBOutlet weak var currentLocationDiv: UILabel!
+    @IBOutlet weak var welcomeDiv: UILabel!
+    @IBOutlet weak var startAgainButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +42,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         numberFiller.isHidden = true
         sendLocationButton.isHidden = true
         locationFiller.isHidden = true
+        currentLocationDiv.isHidden = true
+        startAgainButton.isHidden = true
         // Do any additional setup after loading the view, typically from a nib.
         
         locationManager.delegate = self
@@ -72,11 +77,30 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         subHeader.isHidden = false
         numberFiller.isHidden = false
         sendLocationButton.isHidden = false
+        welcomeDiv.isHidden = true
     }
     
     @IBAction func sendLocationButtonTwo(_ sender: Any) {
         locationFiller.isHidden = false
-        locationFiller.text = "location = http://maps.apple.com/?ll=\(location)"
+        locationFiller.text = "Location = http://maps.apple.com/?ll=\(location)"
+        hiLabel.isHidden = true
+        nameFiller.isHidden = true
+        subHeader.isHidden = true
+        numberFiller.isHidden = true
+        sendLocationButton.isHidden = true
+        currentLocationDiv.isHidden = false
+        startAgainButton.isHidden = false
+    }
+    
+    @IBAction func startAgainButtonTwo(_ sender: Any) {
+        welcomeDiv.isHidden = false
+        inputNameField.isHidden = false
+        inputNumberField.isHidden = false
+        submitButtonTwo.isHidden = false
+        submitButtonTwo.isHidden = false
+        currentLocationDiv.isHidden = true
+        locationFiller.isHidden = true
+        startAgainButton.isHidden = true
     }
     
 }
